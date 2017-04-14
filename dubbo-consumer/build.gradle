@@ -1,0 +1,76 @@
+group 'self'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.5
+
+repositories {
+    //mavenLocal()
+    // mavenCentral()
+    maven {
+        name 'open'
+        url "http://maven.open.com.cn/repository/maven-public/"
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.3.1'
+    // log4j2
+    compile 'org.apache.logging.log4j:log4j-core:2.4.1'
+    compile 'org.apache.logging.log4j:log4j-api:2.4.1'
+    compile 'org.apache.logging.log4j:log4j-slf4j-impl:2.4.1'
+
+    // validator
+    compile 'org.hibernate:hibernate-validator:5.2.0.Final'
+    compile 'javax.validation:validation-api:1.1.0.Final'
+
+    compile 'org.jboss.resteasy:jaxrs-api:3.0.7.Final'
+
+    //http 异步
+    compile  'org.apache.httpcomponents:httpasyncclient:4.1.1'
+
+
+    // dubbo
+    compile ('com.alibaba:dubbo:2.8.5') {
+        exclude(module: 'log4j')
+    }
+
+    // jackson
+    compile 'com.fasterxml.jackson.core:jackson-core:2.7.0-rc2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.7.0-rc2'
+
+    compile 'org.apache.kafka:kafka-clients:0.9.0.0'
+
+    compile 'com.alibaba.rocketmq:rocketmq-client:3.2.6'
+
+    //mongodb
+    compile 'org.springframework.data:spring-data-mongodb:1.8.0.RELEASE'
+    compile 'org.mongodb:mongo-java-driver:3.1.0'
+
+    compile 'com.alibaba:druid:1.0.15'
+    compile 'org.mybatis:mybatis:3.3.0'
+    compile 'org.mybatis:mybatis-spring:1.2.3'
+
+    compile 'mysql:mysql-connector-java:5.1.36'
+    compile 'joda-time:joda-time:2.8.1'
+    compile 'org.springframework:spring-jdbc:3.2.9.RELEASE'
+    compile 'org.springframework:spring-test:3.2.9.RELEASE'
+    compile 'org.springframework:spring-webmvc:3.0.9.RELEASE'
+    compile 'org.springframework.hateoas:spring-hateoas:0.19.0.RELEASE'
+    compile 'org.glassfish:javax.el:3.0.1-b08'
+    compile 'commons-beanutils:commons-beanutils:1.8.3'
+
+    compile 'org.apache.zookeeper:zookeeper:3.5.0-alpha'
+    compile 'com.github.sgroschupf:zkclient:0.1'
+
+    compile 'log4j:log4j:1.2.17'
+    testCompile 'junit:junit:4.11'
+
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+}
+
+war {
+    archiveName = "dubbo-consumer.war"
+}

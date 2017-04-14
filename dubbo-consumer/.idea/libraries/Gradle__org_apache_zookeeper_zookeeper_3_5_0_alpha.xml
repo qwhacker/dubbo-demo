@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.zookeeper:zookeeper:3.5.0-alpha">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper/3.5.0-alpha/2b503721a64c69ba2040716881e6ca2caa90e6a8/zookeeper-3.5.0-alpha.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.zookeeper/zookeeper/3.5.0-alpha/840e1dc4b5279beae383cefe2da6f088d8522dea/zookeeper-3.5.0-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
